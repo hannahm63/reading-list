@@ -1,0 +1,33 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "Create a reading list for yourself!",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahm63/reading-list.git"
+  },
+  "author": "hannahm63",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hannahm63/reading-list/issues"
+  },
+  "homepage": "https://github.com/hannahm63/reading-list#readme"
+}
